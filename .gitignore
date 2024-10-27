@@ -1,0 +1,25 @@
+# .NET specific files
+bin/
+obj/
+*.user
+*.sln.ide
+*.suo
+
+# Visual Studio specific files
+.vs/
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
+*.ncb
+*.opendb
+*.VC.db
+
+# User-specific files
+*.vs/
+*.vscode/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
