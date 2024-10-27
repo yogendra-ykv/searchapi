@@ -1,14 +1,16 @@
-﻿using System.Net;
-using System.Text.Json;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Logging;
-
-namespace SearchAPI.Middleware
+﻿namespace SearchAPI.Middleware
 {
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.Logging;
+    using System.Net;
+    using System.Text.Json;
+
     public class ErrorHandlingMiddleware
     {
         private readonly RequestDelegate _next;
+
         private readonly ILogger<ErrorHandlingMiddleware> _logger;
+
         private readonly IHostEnvironment _env;
 
         public ErrorHandlingMiddleware(RequestDelegate next, ILogger<ErrorHandlingMiddleware> logger, IHostEnvironment env)
@@ -49,6 +51,7 @@ namespace SearchAPI.Middleware
     public class ErrorDetails
     {
         public int StatusCode { get; set; }
+
         public string Message { get; set; }
 
         public override string ToString()
